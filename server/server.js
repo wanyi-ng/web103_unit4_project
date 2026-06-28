@@ -4,7 +4,7 @@ import favicon from 'serve-favicon'
 import dotenv from 'dotenv'
 
 // import the router from your routes file
-import palettesRouter from './routes/palettes.js'
+import apiRouter from './routes/api.js'
 
 dotenv.config()
 
@@ -23,7 +23,7 @@ else if (process.env.NODE_ENV === 'production') {
 }
 
 // specify the api path for the server to use
-app.use('/palettes', palettesRouter)
+app.use('/api', apiRouter)
 
 if (process.env.NODE_ENV === 'production') {
     app.get('/*', (_, res) =>
