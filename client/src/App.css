@@ -1,12 +1,128 @@
-.app {
-    background: url('./assets/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding-bottom: 50px;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.loading {
+    color: cornflowerblue;
+    text-align: center;
+    padding: 24px 0;
+}
+.error {
+    color: crimson;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.palettes-empty-state h2 {
+    color: lightgray;
+}
+
+
+
+.palettes-page {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 24px;
+}
+.palettes-filters {
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+}
+.palettes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 16px;
+}
+.palette {
+    position: relative;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.palette h2,
+.palette p {
+    color: #333;
+}
+.palette-colors {
+    display: flex;
+}
+.palette-favorited {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+}
+
+
+.create-palette,
+.edit-palette {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+.create-palette .heading,
+.edit-palette .heading {
+    color: #333;
+}
+.form-create-palette,
+.form-edit-palette {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.form-create-palette label,
+.form-edit-palette label {
+    color: #333;
+}
+.form-create-palette .colors-section,
+.form-edit-palette .colors-section {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.form-edit-palette .submit-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+
+
+.palette-details h1,
+.palette-details h2,
+.palette-details p {
+    color: #333;
+}
+.palette-details .tag {
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 8px;
+    padding: 0 8px;
+    border-radius: 9999px;
+}
+.palette-details .colors {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
