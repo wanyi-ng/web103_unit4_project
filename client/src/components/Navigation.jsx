@@ -6,12 +6,25 @@ const Navigation = () => {
     return (
         <nav>
             <ul>
-                <li><h1>Bolt Bucket 🏎️</h1></li>
-            </ul>
+                <li>
+                    <h2 className='nav-logo'>PalettePal</h2>
+                    {/* <a href='/' role='link' className='nav-logo'>
+                        PalettePal
+                    </a> */}
+                </li>
 
-            <ul>
-                <li><a href='/' role='button'>Customize</a></li>
-                <li><a href='/customcars' role='button'>View Cars</a></li>
+                <span>
+                    <li>
+                        <a href='/' role='button'>
+                            + Create
+                        </a>
+                    </li>
+                    <li>
+                        <a href='/palettes' role='button'>
+                            View Palettes
+                        </a>
+                    </li>
+                </span>
             </ul>
             
         </nav>
